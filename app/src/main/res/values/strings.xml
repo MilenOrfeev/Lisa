@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Hope</string>
+    <string name="lists">Lists</string>
+    <string name="gym">Gym</string>
+    <string name="reflection">Reflection</string>
+    <string name="money_management">Money Management</string>
+    <string name="create">Create</string>
+    <string name="view">View</string>
+    <string name="list_name">List Name</string>
+    <string name="create_list">Create List</string>
+</resources>
