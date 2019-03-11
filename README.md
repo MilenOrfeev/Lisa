@@ -6,7 +6,7 @@ manage their goals and achieve their dreams.
 ## Installation
 Clone this repository and import into **Android Studio**
 ```bash
-git clone <insert link>
+git clone git@github.com:<username>/Lisa.git
 ```
 
 ## Build 
