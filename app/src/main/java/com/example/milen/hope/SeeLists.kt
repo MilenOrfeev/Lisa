@@ -30,7 +30,7 @@ import java.util.ArrayList
 class SeeLists : AppCompatActivity() {
     private var mDatabaseReference: DatabaseReference? = null
     private var mItemsReference: DatabaseReference? = null
-    internal var mGoogleSignInClient: GoogleSignInClient
+    internal var mGoogleSignInClient: GoogleSignInClient? = null
     internal var account: GoogleSignInAccount? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,7 +83,7 @@ class SeeLists : AppCompatActivity() {
                 val dropdownOptions = ArrayList<String>()
                 val children = dataSnapshot.children
                 for (child in children) {
-                    dropdownOptions.add(child.key)
+                    dropdownOptions.add(child.key!!)
                 }
 
                 val adapter = ArrayAdapter(this@SeeLists,
@@ -111,7 +111,7 @@ class SeeLists : AppCompatActivity() {
 
 
     fun signInUser() {
-        val signInIntent = mGoogleSignInClient.signInIntent
+        val signInIntent = mGoogleSignInClient!!.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
@@ -167,7 +167,7 @@ class SeeLists : AppCompatActivity() {
     }
 
     fun linkWithListener(checkBox: CheckBox) {
-        checkBox.setOnCheckedChangeListener(object : CheckBox.OnCheckedChangeListener {
+        checkBox.setOnCheckedChangeListener(object : CompoundButton.OnCheckedChangeListener {
 
             override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
                 val changedItem = buttonView.text.toString()
