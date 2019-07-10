@@ -9,8 +9,6 @@ before_install:
   - yes | sdkmanager --update
   - yes | sdkmanager --licenses
 
-    language: android
-dist: trusty
 android:
   components:
     # The BuildTools version used by the project
