@@ -1,5 +1,6 @@
 package com.example.milen.hope
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +23,20 @@ class HomeScreen : AppCompatActivity() {
                 startActivity(intent)
             }
         }// do nothing
+    }
+
+    fun readStudyHours() : Int {
+        val sharedPref = getPreferences(Context.MODE_PRIVATE)
+        val studyHours = sharedPref.getInt("studyHours", 0)
+        return studyHours
+    }
+
+    fun writeStudyHours(newValue: Int) {
+        val sharedPref = getPreferences(Context.MODE_PRIVATE)
+        with (sharedPref.edit()) {
+            putInt("studyHours", newValue)
+            apply()
+        }
     }
 
     /**
