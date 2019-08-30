@@ -1,4 +1,6 @@
 # Life Assistant Lisa
+===============================================================================
+[![CircleCI](https://circleci.com/gh/MilenOrfeev/Lisa.svg?style=svg)](https://circleci.com/gh/MilenOrfeev/Lisa)
 
 This is an Android application which helps the user organise their schedule,
 manage their goals and achieve their dreams.
@@ -22,4 +24,4 @@ This project is mantained by:
 
 ## Contributing
 This project is in its very early stages, but if you would like to contribude,
-please email me on milen.orfeev@student.manchester.ac.uk
+please email me on milen.orfeev@gmail.com
