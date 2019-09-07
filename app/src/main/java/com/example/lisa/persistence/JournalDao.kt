@@ -8,8 +8,8 @@ import androidx.room.Query
 @Dao
 interface JournalDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(journal: JournalDao)
+    suspend fun insert(journal: Journal)
 
     @Query("SELECT study_time from journal WHERE date LIKE :date")
-    suspend fun findStudyTimeByDate(date: String)
+    suspend fun findStudyTimeByDate(date: String) : Int
 }
